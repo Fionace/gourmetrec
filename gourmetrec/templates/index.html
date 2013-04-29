@@ -1,0 +1,48 @@
+{% extends "base.html"%}
+{%block cont%}
+    <head>
+        <title>试验</title>
+    </head>
+    <body>
+        <p>{{url_for('gourmetrec.templates')}}"<p>
+        <div class="top">
+            <div class="hd">
+                <p>暂时占位</p>
+            </div>
+            <div class="bd">
+        <div class="login">
+            <form name="login" action="{{url_for('.tmp')}}" method="get">
+                <div class="item">
+            <label for="account">帐号</label>
+            <input type="text" name="account" id="account" tabindex="1" style="color:rgb(204,204,204);">
+            </div>
+            <br>
+            <div class="item">
+            <label for="passwd">密码</label>
+            <input type="password" name="passwd" id="passwd" tabindex="2" style="color:rgb(204,204,204);">
+            </div>
+            <br>
+            <input value="登录" type="submit" tabindex="3" class="butt">
+
+        </form>
+        </div>
+        <div class="reg">
+        <strong>周边美食</strong>
+        <div class="info">
+            <b>周边美食，寻找您手边的美食</b>
+            <br>
+            <em>带上您的朋友一起，开始寻找美食之旅</em>
+            <br>
+            <a href="{{url_for('.register')}}" class="linkreg"><strong>加入我们</strong>     注册
+            </a>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div id="wrapper">
+        <div id="bd">
+        <h1>大家都在吃...</h1> 
+      </div>
+    </div>
+        </body>
+        {%endblock%}

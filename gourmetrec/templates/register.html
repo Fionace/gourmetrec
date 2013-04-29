@@ -1,0 +1,54 @@
+{% extends "base.html"%}
+{%block cont%}
+<head>
+<script type=text/javascript src="{{url_for('gourmetrec.templates',filename='jquery-1.9.1.js')}}"></script>
+ <title>欢迎加入周边美食</title>
+</head>
+<body>
+    <div id="wrapper">
+    <div id="content">
+        <h1>欢迎加入周边美食</h1>
+        <form name="register" method=get action="{{url_for('.tmp')}}">
+        <div class="itemm extra-tips has-error">
+        <label>邮箱</label> 
+        <input id="email" type="text" class="baseinput" tabindex="1">
+        <span class="validate-option" style="display:none;">用来登录使用</span>
+        <span class="validate-error" style="display:none;">Email不能为空</span> 
+    </div>
+    <div class="itemm extra-tips">
+        <label>密码</label>
+    <input type="password" id="passwd1" name="passwd1" class="baseinput" tabindex="2" onchange="blurpasswd()" >
+</div>
+  <input type="submit" id="regsub" value="注册" disabled class="butt disabled" tabindex="3" title="显示提示信息..." onclick="blurpasswd()" >
+    
+    </div>
+
+</div>
+</body>
+
+<script language="JavaScript">
+
+     $("input[name='passwd1']").ready(function(){
+         if (passwd1.value && email.value){
+        $("input[type='submit']").attr('disabled', false).addClass('enabled');
+            alert(passwd1.value+"111"+regsub.disabled);
+    } else {
+    $("input[type='submit']").attr('disabled', true).removeClass('enabled');
+            alert(email.value+"222"+regsub.disabled);
+    }
+});
+   /* function blurpasswd()
+    {
+        if (passwd1.value && email.value)
+        {
+            regsub.disabled=false;
+            alert(passwd1.value+"111"+regsub.disabled)
+
+            }  else{
+
+            regsub.disabled=true;
+            alert(email.value+"222"+regsub.disabled)
+        }
+        }*/
+</script>
+{%endblock%}

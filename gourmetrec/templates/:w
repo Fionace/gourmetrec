@@ -1,0 +1,17 @@
+{% extends "base.html"%}
+{%block cont%}
+<head>
+    <title>欢迎加入周边美食</title>
+</head>
+<body>
+    <div id="wrapper">
+    <div id="content">
+        <h1>欢迎加入周边美食</h1>
+    <form name="register" method=post action="{{url_for('.tmp')}}">
+
+    
+    </div>
+
+</div>
+</body>
+{%endblock%}
